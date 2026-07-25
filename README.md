@@ -38,10 +38,7 @@ The goal was simple : answer one business question:
 
 ##  The Funnel — 5 Stages
 
-  Stage 1        Stage 2        Stage 3        Stage 4        Stage 5
-  Order      ->   Payment    ->   Handed to  ->   Delivered  ->   Customer
-  Placed         Approved       Carrier         to Customer    Reviews
-         
+Stage 1 (Order Placed)  ->  Stage 2  (Payment Approved)  ->  Stage 3 (Handed to Carrier)  ->  Stage 4 (Delivered  to Customer)  ->   Stage 5 (Customer Reviews)     
 
 ##  Key Insights
 
