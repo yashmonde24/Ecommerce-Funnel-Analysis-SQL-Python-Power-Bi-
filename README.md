@@ -68,6 +68,6 @@ Computers and Watches generate high revenue but also have higher cancellation ra
 
 ## Outcomes Preview :
 - Dashboard : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/blob/main/powerbi/Powerbi_Outcomes/Dashboard.jpg
-
+- EDA Visualization : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/tree/main/notebook/EDA_outcomes
 
 
