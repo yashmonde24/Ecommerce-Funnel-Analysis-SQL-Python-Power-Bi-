@@ -42,12 +42,29 @@ Stage 1 (Order Placed)  ->  Stage 2  (Payment Approved)  ->  Stage 3 (Handed to 
 
 ##  Key Insights
 
-- **97%** of orders were successfully delivered
-- **Late deliveries** had significantly lower review scores — orders delivered late averaged 2.5 stars vs 4.3 stars for on-time orders
-- **Credit card** was used in 74% of orders and had the highest delivery rate
-- **90%+** of customers were one-time buyers — very low repeat customer rate
-- **Amazon state (AM)** had the worst late delivery rate at 31% — a clear logistics problem
-- Orders with **review score 1** took on average **28 days** to deliver vs **10 days** for score 5
+- **97%** of orders were successfully delivered.
+- **Late deliveries** had significantly lower review scores — orders delivered late averaged 2.5 stars vs 4.3 stars for on-time orders.
+- **Credit card** was used in 74% of orders and had the highest delivery rate.
+- **90%+** of customers were one-time buyers — very low repeat customer rate.
+- **Amazon state (AM)** had the worst late delivery rate at 31% — a clear logistics problem.
+- Orders with **review score 1** took on average **28 days** to deliver vs **10 days** for score 5.
+
+## Recommendations
+
+1. Improve delivery in problem states
+States like AM and RR have very high late delivery rates. The business should review its logistics partners there and fix the root cause.
+
+2. Set a delivery speed target
+Faster delivery directly led to better reviews in the data. Targeting delivery within 10 days would likely improve customer satisfaction across the board.
+
+3. Bring customers back
+90%+ of customers only bought once. A simple discount or offer on the second order could turn one-time buyers into repeat ones.
+
+4. Investigate voucher orders
+Voucher users left more bad reviews than credit card users. It is worth checking whether these orders have longer delivery times or different product types.
+
+5. Protect high-value categories
+Computers and Watches generate high revenue but also have higher cancellation rates. Fixing delivery for just these categories would have an outsized impact on total revenue
 
 
 
