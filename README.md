@@ -66,5 +66,8 @@ Voucher users left more bad reviews than credit card users. It is worth checking
 5. Protect high-value categories
 Computers and Watches generate high revenue but also have higher cancellation rates. Fixing delivery for just these categories would have an outsized impact on total revenue
 
+## Outcomes Preview :
+- Dashboard : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/blob/main/powerbi/Powerbi_Outcomes/Dashboard.jpg
+
 
 
