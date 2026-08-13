@@ -96,7 +96,7 @@ The biggest single drop happens between Delivered and Reviewed — 15 percentage
 - reporting.pbix:	One-page Power BI dashboard with 10 visuals, DAX measures, and slicers
 - README.md:	Full project documentation
 
-## Outcomes Preview :
+## 9. Outcomes Preview :
 - Dashboard : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/blob/main/powerbi/Powerbi_Outcomes/Dashboard.jpg
 - EDA Visualization : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/tree/main/notebook/EDA_outcomes
 - Query Summary : https://github.com/yashmonde24/Ecommerce-Funnel-Analysis-SQL-Python-Power-Bi-/blob/main/notebook/EDA_outcomes/Quick%20Summary.jpg
