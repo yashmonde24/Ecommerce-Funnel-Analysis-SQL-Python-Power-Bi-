@@ -1,6 +1,8 @@
 # E-Commerce Orders Funnel Analysis - Where Do Customers Drop Off And Why ?
 
-Tools: MS SQL Server · Python (Jupyter Notebook) · Power BI Dataset: Olist Brazilian E-Commerce — Kaggle 
+Tools:
+- MS SQL Server · Python (Jupyter Notebook)
+- Power BI Dataset: Olist Brazilian E-Commerce — Kaggle 
 - Records Analysed: 99,441 orders · 6 tables · 112,650 order line items
 
 - Problem Statement :
