@@ -1,18 +1,5 @@
 # E-Commerce Orders Funnel Analysis - Where Do Customers Drop Off And Why ?
 
-Tools:
-- MS SQL Server · Python (Jupyter Notebook)
-- Power BI Dataset: Olist Brazilian E-Commerce — Kaggle 
-- Records Analysed: 99,441 orders · 6 tables · 112,650 order line items
-
-# Problem Statement :
-
-An e-commerce business cannot fix what it cannot see. This platform had no clear picture of how many orders were falling apart between being placed and reaching the customer — or why. Bad reviews were piling up, customers were not returning, and delivery problems in certain regions were going unnoticed behind a healthy-looking headline number.
-
-# Objective :
-
-Track every order across all 5 stages of the buying journey, find where and why customers are dropping off, prove the findings statistically, and give the business a clear set of actions backed by data.
-
 # 1. Background and Overview
 
 Most e-commerce reports stop at total orders and total revenue. This project goes further — it follows each order from placement through approval, shipping, delivery, and review to find exactly where the leaks are.
@@ -22,6 +9,13 @@ The analysis runs across three tools: SQL for the database and business queries,
 The central question: where do orders drop off between being placed and reaching the customer?
 
 The analysis covers the full workflow — database design in SQL, exploratory analysis in Python, and a one-page interactive dashboard in Power BI.
+
+Problem Statement :
+An e-commerce business cannot fix what it cannot see. This platform had no clear picture of how many orders were falling apart between being placed and reaching the customer — or why. Bad reviews were piling up, customers were not returning, and delivery problems in certain regions were going unnoticed behind a healthy-looking headline number.
+
+Objective :
+Track every order across all 5 stages of the buying journey, find where and why customers are dropping off, prove the findings statistically, and give the business a clear set of actions backed by data.
+
 
 # 2. Data Structure Overview
 
@@ -48,42 +42,50 @@ Power BI reporting.pbix	One-page interactive dashboard
 
 ## 3. Executive Summary
 
-The business is operationally solid — 97% of orders were delivered successfully. But two problems stand out clearly when you look past that headline number.
+The business delivers 97% of orders successfully. But two problems sit underneath that number.
 
-First, delivery speed has a direct impact on customer satisfaction. Orders that arrived late averaged a 2.5-star review. Orders that arrived on time averaged 4.3. That gap does not close on its own.
+Orders that arrived late averaged 2.5 stars. Orders that arrived on time averaged 4.3 stars. That gap is not random — it was confirmed statistically. And more than 90% of customers never placed a second order, making the business almost entirely dependent on new buyers, which is an expensive way to grow.
 
-Second, 90%+ of customers never placed a second order. The business is almost entirely dependent on new customers. That is an expensive way to grow.
-
-The funnel at a glance:
+The funnel :
 
 Order Placed -> Approved -> Shipped -> Delivered -> Reviewed
-   100%          96%        93%        87%         72%
+   100%          99.84%      98.21%      97.02%      96.37%
 
-The biggest single drop happens between Delivered and Reviewed — 15 percentage points. Customers receive the order but do not engage after. This matters because reviews drive future buyer trust.
+The biggest single drop happens at the Shipped stage — 1,623 orders fell off there, the largest absolute drop across all 5 stages.
 
 ## 4. Insights Deep Dive
 
-- Delivery and satisfaction Late orders averaged 28 days to arrive. Orders that got a 5-star review averaged 10 days. A regression model confirmed this — every extra day of delivery drops the predicted review score, and the relationship is statistically significant (p < 0.05).
+- Delivery speed and satisfaction :
+Orders rated 1 star took an average of 28 days to arrive. Orders rated 5 stars took 10    days. A regression model confirmed this — every extra day of delivery drops the   predicted review score, and the relationship is statistically significant (p < 0.05).
 
-- State-level delivery problems The national late delivery rate sits at around 8%. But Amazonas (AM) was at 31% and Roraima (RR) was close behind. These are not     small rounding errors — they point to a logistics failure in specific regions that the overall average hides.
+- State-level delivery problems :
+The national late delivery rate is around 8%. Amazonas (AM) sits at 31% and Roraima (RR) is close behind. These are not small variations — they point to a logistics failure that the national average hides entirely.
 
-- Payment behaviour Credit card was used in 74% of orders and had the highest delivery success rate. Voucher users, on the other hand, left a disproportionately     high share of 1 and 2-star reviews. This could be a delivery issue, a product expectation mismatch, or both — but it needs a closer look.
+- Payment behaviour :
+Credit card was used in 74% of orders and had the strongest delivery record. Voucher users left a disproportionate share of 1 and 2-star reviews. Whether this is a delivery issue or a product expectation mismatch needs further investigation.
 
-- Customer retention : The RFM analysis showed that Champions and Loyal Customers — the small group who came back — spent significantly more per order on average. But they make up a tiny fraction of the base. More than 90% of customers are one-time buyers.
+- Customer retention :
+The RFM analysis showed that Champions and Loyal Customers — the small group who came back — spent significantly more per order on average. But they make up a tiny fraction of the base. More than 90% of customers are one-time buyers.
 
-- Category performance Bed and Bath, Health and Beauty, and Computers were the top revenue categories. Computers and Watches had high revenue but also a higher      cancellation rate than other categories. A cancellation in a high-value category costs more than a cancellation in a low-value one.
+- Category performance:
+Bed and Bath, Health and Beauty and Computers led on order volume. Computers and Watches had high revenue but also higher cancellation rates — a cancellation in a high-value category costs more than one in a low-value one.
 
 ## 5. Recommendations
 
-- Fix delivery in AM and RR first A 31% late delivery rate in AM is not a blip. The business should audit its carrier partnerships in the north and northeast        states and set region-specific delivery targets.
+- Fix delivery in AM and RR first :
+A 31% late delivery rate in AM is not noise. The business should audit its carrier partnerships in the north and northeast and set region-specific targets.
 
-- Set a 10-day delivery target The data shows that orders delivered within 10 days consistently get 4-star+ reviews. This is a concrete operational target, not a    vague goal.
+- Set a 10-day delivery target :
+The regression shows that orders delivered within 10 days consistently score above 4 stars. This is a concrete, measurable operational goal.
 
-- Add a second-purchase trigger 90% one-time buyers is a retention problem with a straightforward starting fix. A discount or personalised offer after first         delivery — timed within 2 weeks — is a standard and low-cost way to start pulling that number down.
+- Add a second-purchase trigger :
+A simple discount or offer within 2 weeks of first delivery is a low-cost starting point for pulling the 90% one-time buyer rate down.
 
-- Investigate voucher order experience Voucher users are leaving more bad reviews. Before writing this off as a payment issue, check whether voucher orders skew     toward longer delivery routes or lower-rated product categories.
+- Investigate voucher order experience :
+Voucher users leave more bad reviews. Check whether these orders skew toward slower delivery routes or specific product categories before drawing conclusions.
 
-- Protect revenue in high-cancellation categories Computers and Watches drive significant revenue. Even a modest improvement in their cancellation rate would have   an outsized effect on total revenue. These categories deserve their own delivery SLA.
+- Protect revenue in high-cancellation categories :
+Computers and Watches drive significant revenue. Even a small improvement in their cancellation rate would have an outsized impact on total revenue.
 
 ## 6. Assumptions and Limitations
 - All analysis is based on historical data. Patterns found here may not reflect current operations.
@@ -93,11 +95,9 @@ The biggest single drop happens between Delivered and Reviewed — 15 percentage
 - Repeat customer analysis is based on customer_unique_id. Customers who used different emails or accounts for different orders would be counted as new buyers.
 
 ## 7. Future Enhancements
-- Add return and refund data to get a complete picture of post-delivery customer experience.
-- Build a customer segmentation model in Python using RFM scoring — Recency, Frequency, Monetary — to identify which one-time buyers are most likely to return       with the right nudge.
-- Automate the dashboard by connecting Power BI to a live SQL database instead of static CSV files, so the report updates without manual refreshes.
-- Add a seller-level analysis to find which sellers have the worst delivery times and review scores — the Olist dataset includes seller data that this project did   not use.
-- Forecast monthly order volume using a simple time series model to help the business plan logistics capacity ahead of peak seasons.
+- Add return and refund data for a complete post-delivery picture.
+- Add seller-level analysis — the dataset includes seller data not used in this version.
+- Build a time series forecast for monthly order volume to help plan logistics capacity ahead of peak periods.
 
 ## 8. Deliverables
 - DBStructure.sql	Full DDL script : creates database and all 6 tables
