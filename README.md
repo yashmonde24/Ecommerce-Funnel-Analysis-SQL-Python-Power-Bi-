@@ -48,8 +48,12 @@ Orders that arrived late averaged 2.5 stars. Orders that arrived on time average
 
 The funnel :
 
-Order Placed -> Approved -> Shipped -> Delivered -> Reviewed
-   100%          99.84%      98.21%      97.02%      96.37%
+1. Order Placed (100%) 
+2. Approved (99.84%) 
+3. Shipped (98.21%) 
+4. Delivered (97.02%) 
+5. Reviewed (96.37%)
+                     
 
 The biggest single drop happens at the Shipped stage — 1,623 orders fell off there, the largest absolute drop across all 5 stages.
 
