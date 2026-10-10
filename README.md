@@ -1,12 +1,21 @@
-# E-Commerce Funnel Analysis — End-to-End Data Analyst Project
+# E-Commerce Orders Funnel Analysis - Where Do Customers Drop Off And Why ?
 
-Tools: MS SQL Server · Python (Jupyter Notebook) · Power BI Dataset: Olist Brazilian E-Commerce — Kaggle
+Tools: MS SQL Server · Python (Jupyter Notebook) · Power BI Dataset: Olist Brazilian E-Commerce — Kaggle 
+- Records Analysed: 99,441 orders · 6 tables · 112,650 order line items
+
+- Problem Statement :
+
+An e-commerce business cannot fix what it cannot see. This platform had no clear picture of how many orders were falling apart between being placed and reaching the customer — or why. Bad reviews were piling up, customers were not returning, and delivery problems in certain regions were going unnoticed behind a healthy-looking headline number.
+
+- Objective :
+
+Track every order across all 5 stages of the buying journey, find where and why customers are dropping off, prove the findings statistically, and give the business a clear set of actions backed by data.
 
 # 1. Background and Overview
 
-E-commerce businesses lose customers at every step — from placing an order to actually receiving it. Most companies know their total sales number. Very few know exactly where in the process things break down.
+Most e-commerce reports stop at total orders and total revenue. This project goes further — it follows each order from placement through approval, shipping, delivery, and review to find exactly where the leaks are.
 
-This project picks up that problem. I used a real dataset from Olist, a Brazilian marketplace, to track 100,000+ orders across every stage of the buying journey and find where and why customers were falling off.
+The analysis runs across three tools: SQL for the database and business queries, Python for deeper analysis and visualisation and Power BI for a one-page interactive dashboard.
 
 The central question: where do orders drop off between being placed and reaching the customer?
 
@@ -14,7 +23,7 @@ The analysis covers the full workflow — database design in SQL, exploratory an
 
 # 2. Data Structure Overview
 
-Source: Olist Brazilian E-Commerce Dataset — Kaggle Size: ~100,000 orders across 6 tables
+Source: Olist Brazilian E-Commerce Dataset — Kaggle Size: 99,441 orders across 6 tables
 
 File	What it contains
 olist_orders_dataset.csv:	Every order with a timestamp for each funnel stage
@@ -52,13 +61,13 @@ The biggest single drop happens between Delivered and Reviewed — 15 percentage
 
 ## 4. Insights Deep Dive
 
-- Delivery and satisfaction Late orders averaged 28 days to arrive. Orders that got a 5-star review averaged 10 days. The relationship is consistent across the      data — the longer the wait, the lower the score. This is not a coincidence; it held across payment types and product categories.
+- Delivery and satisfaction Late orders averaged 28 days to arrive. Orders that got a 5-star review averaged 10 days. A regression model confirmed this — every extra day of delivery drops the predicted review score, and the relationship is statistically significant (p < 0.05).
 
 - State-level delivery problems The national late delivery rate sits at around 8%. But Amazonas (AM) was at 31% and Roraima (RR) was close behind. These are not     small rounding errors — they point to a logistics failure in specific regions that the overall average hides.
 
 - Payment behaviour Credit card was used in 74% of orders and had the highest delivery success rate. Voucher users, on the other hand, left a disproportionately     high share of 1 and 2-star reviews. This could be a delivery issue, a product expectation mismatch, or both — but it needs a closer look.
 
-- Customer retention More than 90% of customers bought once and left. The ones who did return spent significantly more on average. That gap in spend between one-    time and repeat buyers makes retention the single highest-leverage opportunity in the dataset.
+- Customer retention : The RFM analysis showed that Champions and Loyal Customers — the small group who came back — spent significantly more per order on average. But they make up a tiny fraction of the base. More than 90% of customers are one-time buyers.
 
 - Category performance Bed and Bath, Health and Beauty, and Computers were the top revenue categories. Computers and Watches had high revenue but also a higher      cancellation rate than other categories. A cancellation in a high-value category costs more than a cancellation in a low-value one.
 
