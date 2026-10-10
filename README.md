@@ -5,11 +5,11 @@ Tools:
 - Power BI Dataset: Olist Brazilian E-Commerce — Kaggle 
 - Records Analysed: 99,441 orders · 6 tables · 112,650 order line items
 
-- Problem Statement :
+# Problem Statement :
 
 An e-commerce business cannot fix what it cannot see. This platform had no clear picture of how many orders were falling apart between being placed and reaching the customer — or why. Bad reviews were piling up, customers were not returning, and delivery problems in certain regions were going unnoticed behind a healthy-looking headline number.
 
-- Objective :
+# Objective :
 
 Track every order across all 5 stages of the buying journey, find where and why customers are dropping off, prove the findings statistically, and give the business a clear set of actions backed by data.
 
