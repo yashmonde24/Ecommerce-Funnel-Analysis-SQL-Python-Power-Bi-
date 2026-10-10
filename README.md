@@ -19,26 +19,26 @@ Track every order across all 5 stages of the buying journey, find where and why 
 
 # 2. Data Structure Overview
 
-Source: Olist Brazilian E-Commerce Dataset — Kaggle Size: 99,441 orders across 6 tables
+- Source: Olist Brazilian E-Commerce Dataset — Kaggle Size: 99,441 orders across 6 tables
 
-File	What it contains
-olist_orders_dataset.csv:	Every order with a timestamp for each funnel stage
-olist_order_items_dataset.csv:	Products inside each order, with price and freight
-olist_customers_dataset.csv:	Customer city and state
-olist_products_dataset.csv: Product names and categories
-olist_order_payments_dataset.csv:	Payment method and amount paid
-olist_order_reviews_dataset.csv:	Customer review score from 1 to 5
+- File	What it contains
+  - olist_orders_dataset.csv:	Every order with a timestamp for each funnel stage
+  - olist_order_items_dataset.csv:	Products inside each order, with price and freight
+  - olist_customers_dataset.csv:	Customer city and state
+  - olist_products_dataset.csv: Product names and categories
+  - olist_order_payments_dataset.csv:	Payment method and amount paid
+  - olist_order_reviews_dataset.csv:	Customer review score from 1 to 5
 
-How the tables connect: The orders table sits at the centre. Every other table links to it through order_id or customer_id. This structure was replicated as a Star Schema in the Power BI data model.
+- How the tables connect: The orders table sits at the centre. Every other table links to it through order_id or customer_id. This structure was replicated as a Star Schema in the Power BI data model.
 
-Project files:
+- Project files:
 
-Tool	File	Purpose
-MS SQL Server	DBStructure.sql	Creates the database and all 6 tables
-MS SQL Server	Data_Loading.sql	Loads data into each table
-MS SQL Server	Data_Analysis_Reporting.sql	All business analysis queries
-Python	ecommerce_funnel_eda.ipynb	Full exploratory data analysis
-Power BI reporting.pbix	One-page interactive dashboard
+  - Tool	File	Purpose :
+   - MS SQL Server	DBStructure.sql	Creates the database and all 6 tables
+   - MS SQL Server	Data_Loading.sql	Loads data into each table
+   - MS SQL Server	Data_Analysis_Reporting.sql	All business analysis queries
+   - Python	ecommerce_funnel_eda.ipynb	Full exploratory data analysis
+   - Power BI reporting.pbix	One-page interactive dashboard
 
 ## 3. Executive Summary
 
