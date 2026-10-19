@@ -34,12 +34,21 @@ Track every order across all 5 stages of the buying journey, find where and why 
 - Project files:
 
   - Tool	File	Purpose :
+
    - MS SQL Server DBStructure(Bronze Layer No-1).sql Creates the database & table structure
    - MS SQL Server Data_Loading(Bronze Layer No-1).sql Loads data into each table
    - MS SQL Server Data Preparation (Silver Layer No -2).sql - Data Transformation & Deduplication per table
    - MS SQL Server Data_Analysis_Reporting(Gold Layer No -3).sql All business analysis queries
    - Python ecommerce_funnel_eda.ipynb Full exploratory data analysis
    - Power BI reporting.pbix One-page interactive dashboard
+
+   - MS SQL Server DBStructure(Bronze Layer No-1).sql	Creates the database & table      structure
+   - MS SQL Server	Data_Loading(Bronze Layer No-1).sql	Loads data into each table
+   - MS SQL Server Data Preparation (Silver Layer No -2).sql - Data Transformation & Deduplication per table
+   - MS SQL Server	Data_Analysis_Reporting(Gold Layer No -3).sql	All business analysis queries
+   - Python	ecommerce_funnel_eda.ipynb	Full exploratory data analysis
+   - Power BI reporting.pbix	One-page interactive dashboard
+
 
 ## 3. Executive Summary
 
