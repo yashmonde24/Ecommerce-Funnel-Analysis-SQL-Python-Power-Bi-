@@ -29,14 +29,15 @@ Track every order across all 5 stages of the buying journey, find where and why 
   - olist_order_payments_dataset.csv:	Payment method and amount paid
   - olist_order_reviews_dataset.csv:	Customer review score from 1 to 5
 
-- How the tables connect: The orders table sits at the centre. Every other table links to it through order_id or customer_id. This structure was replicated as a Star Schema in the Power BI data model.
+- How the tables connect: The orders table sits at the centre. Every other table links to it through order_id or customer_id. The project follows Medallion Architecture — raw data loads into Bronze tables, a Silver layer of SQL views handles transformation and deduplication per table, and Power BI and Python read from Silver Layer views. This keeps the Star Schema intact in Power BI while ensuring no raw data reaches the reporting layer directly.
 
 - Project files:
 
   - Tool	File	Purpose :
-   - MS SQL Server	DBStructure.sql	Creates the database and all 6 tables
-   - MS SQL Server	Data_Loading.sql	Loads data into each table
-   - MS SQL Server	Data_Analysis_Reporting.sql	All business analysis queries
+   - MS SQL Server DBStructure(Bronze Layer No-1).sql	Creates the database & table      structure
+   - MS SQL Server	Data_Loading(Bronze Layer No-1).sql	Loads data into each table
+   - MS SQL Server Data Preparation (Silver Layer No -2).sql - Data Transformation & Deduplication per table
+   - MS SQL Server	Data_Analysis_Reporting(Gold Layer No -3).sql	All business analysis queries
    - Python	ecommerce_funnel_eda.ipynb	Full exploratory data analysis
    - Power BI reporting.pbix	One-page interactive dashboard
 
